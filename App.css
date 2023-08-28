@@ -33,6 +33,11 @@ h3>p {
     align-items: center;
     margin: 5px;
 }
+.Questionarea.disclaimer {
+    font-size: 15px;
+    font-style: italic;
+    margin: 5px;
+}
 const pages = [
   'NeedsObligation.html',
   'PersonalSpendings.html',
