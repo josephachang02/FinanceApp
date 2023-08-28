@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Spending</title>
+    <link rel ="stylesheet" href="App.css">
+    <script src ="./App.js" defer></script>
+</head>
+<body>
+    <div class id = "Questionarea">
+    <h2 style="display: flex; justify-content: space-between;">Subscriptions</h2>
+    <p class="disclaimer"></p>
+    <form id="incomeNecessities">
+        <label>Monthly Subscription Expenses $</label>
+            <input type="number" step="0.01" id="housingExpenses">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class id = "Questionarea">
+    <h2 style="display: flex; justify-content: space-between;">Memberships</h2>
+    <p class="disclaimer"></p>
+    <form id="incomeNecessities">
+        <label>Monthly Memberships Expenses $</label>
+            <input type="number" step="0.01" id="groceryExpenses">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class id = "Questionarea">
+    <h2 style="display: flex; justify-content: space-between;">Recreation/Entertainment</h2>
+    <form id="incomeNecessities">
+        <p></p>
+        <label>Average Recreation/Entertainment Expenses $</label>
+            <input type="number" id="utilityExpenses">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class id = "Questionarea">
+        <h2 style="display: flex; justify-content: space-between;">Retail</h2>
+        <form id="incomeNecessities">
+            <label>Average Monthly Retail Expenses $</label>
+                <input type="number" step="0.01" id="utilityExpenses">
+                <br>
+                <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class id = "Questionarea">
+        <h2 style="display: flex; justify-content: space-between;">Dining</h2>
+        <form id="incomeNecessities">
+            <label>Average Monthly Dining Expenses $</label>
+                <input type="number" step="0.01" id="utilityExpenses">
+                <br>
+                <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class id = "Questionarea">
+        <h2 style="display: flex; justify-content: space-between;">Vacation/Traveling</h2>
+        <form id="incomeNecessities">
+            <label>Average Monthly Vacation/Traveling Expenses $</label>
+                <input type="number" step="0.01" id="childCareExpenses">
+                <br>
+                <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+<br>
+<div id="totalColumn">
+    <h2>Total: $<span id="totalAmount">0</span></h2>
+</div>
+</div>
+</body>
+</html>
