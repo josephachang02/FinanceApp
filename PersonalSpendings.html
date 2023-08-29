@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Spending</title>
     <link rel ="stylesheet" href="App.css">
-    <script src ="./App.js" defer></script>
+    <script src ="./personal.js" defer></script>
 </head>
-<body>
+<body class="AppIntro">
+    <h1 style="text-align: center; margin: 0 auto; align-items: flex-start;">Personal Spending Expenses</h1>
+    <br>
+
     <div class id = "Questionarea">
     <h2 style="display: flex; justify-content: space-between;">Subscriptions</h2>
     <p class="disclaimer"></p>
-    <form id="incomeNecessities">
+    <form id="subscriptionExpenses">
         <label>Monthly Subscription Expenses $</label>
             <input type="number" step="0.01" id="housingExpenses">
             <br>
@@ -21,7 +24,7 @@
     <div class id = "Questionarea">
     <h2 style="display: flex; justify-content: space-between;">Memberships</h2>
     <p class="disclaimer"></p>
-    <form id="incomeNecessities">
+    <form id="membershipExpenses">
         <label>Monthly Memberships Expenses $</label>
             <input type="number" step="0.01" id="groceryExpenses">
             <br>
@@ -30,7 +33,7 @@
     </div>
     <div class id = "Questionarea">
     <h2 style="display: flex; justify-content: space-between;">Recreation/Entertainment</h2>
-    <form id="incomeNecessities">
+    <form id="entertainmentExpenses">
         <p></p>
         <label>Average Recreation/Entertainment Expenses $</label>
             <input type="number" id="utilityExpenses">
@@ -40,7 +43,7 @@
     </div>
     <div class id = "Questionarea">
         <h2 style="display: flex; justify-content: space-between;">Retail</h2>
-        <form id="incomeNecessities">
+        <form id="retailExpenses">
             <label>Average Monthly Retail Expenses $</label>
                 <input type="number" step="0.01" id="utilityExpenses">
                 <br>
