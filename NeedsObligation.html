@@ -11,12 +11,13 @@
     <h1 id="titleIntro">Financial Necessities</h1>
     <br>
     <p>A large sum of where our financial income goes towards ends up contributing towards our necessities. Above all other categories of where our money should go, this takes precedence in how someone is able to maintain stability.</p>
+    <p id="incomeDisplay"></p>
     <div class id="Questionarea">
     <h2 style="display: flex; justify-content: space-between;">Housing</h2>
     <p class="disclaimer">This amount should ONLY comprise of your monthly rent/mortgage</p>
     <form class="needsInput" id="housingExpenses">
         <label>Monthly Housing Expenses $</label>
-            <input type="number" step="0.01" id="housingExpenses">
+            <input type="number" class="expenseInput" step="0.01" id="housingExpenses">
             <br>
             <!-- <input type="submit" value="Submit"> -->
         </form>
@@ -26,7 +27,7 @@
     <p class="disclaimer">Does not count dining-out expenses...including DoorDash</p>
     <form class="needsInput" id="foodExpenses">
         <label>Monthly Food Expenses (Groceries) $</label>
-            <input type="number" step="0.01" id="groceryExpenses">
+            <input type="number" class="expenseInput" step="0.01" id="groceryExpenses">
             <br>
             <!-- <input type="submit" value="Submit"> -->
         </form>
@@ -36,7 +37,7 @@
     <p class="disclaimer">Electricity/Water/Gas/Trash/Internet/Loans/Payments/Insurance</p>
     <form class="needsInput" id="utilitiesExpenses">
         <label>Monthly Utilities Expenses $</label>
-            <input type="number" step="0.01" id="utilityExpenses">
+            <input type="number" class="expenseInput" step="0.01" id="utilityExpenses">
             <br>
             <!-- <input type="submit" value="Submit"> -->
         </form>
@@ -56,7 +57,7 @@
         <form class="needsInput" id="transportationExpenses">
             <p class="disclaimer">Cost of Fuel or Bus/Train Fare per month</p>
             <label>Monthly Transportation Expenses $</label>
-                <input type="number" step="0.01" id="utilityExpenses">
+                <input type="number" class="expenseInput" step="0.01" id="utilityExpenses">
                 <br>
                 <!-- <input type="submit" value="Submit"> -->
         </form>
@@ -66,7 +67,7 @@
         <form class="needsInput" id="childCareExpenses">
             <p class="disclaimer">Formula/Diapers/Day Care</p>
             <label>Monthly Child Care Expenses $</label>
-                <input type="number" step="0.01" id="childCareExpenses">
+                <input type="number" class="expenseInput" step="0.01" id="childCareExpenses">
                 <br>
                 <!-- <input type="submit" value="Submit"> -->
         </form>
