@@ -1,8 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const income = parseFloat(urlParams.get('income'));
 
-// console.log(income);
-
 let total=0;
 
 const housingExpensesInput = document.getElementById('housingExpenses');
@@ -18,12 +16,12 @@ const totalNeedExpenses=()=>{
     // let total = 0;
     allNeedsInput.forEach(input => {
         total += parseFloat(input.value) || 0;
-    console.log(input); console.log(input.value);
+    // console.log(input); console.log(input.value);
     });
 
     let totalField = document.getElementById('NecessaryTotal');
-    console.log(total); 
-    console.log(totalField);
+    // console.log(total); 
+    // console.log(totalField);
     totalField.value = total;
 };
 //add a change event listener to each input

@@ -15,3 +15,34 @@
 
 // 3 total sections with a console log for each 50/30/20 bracket. These conditions will be a console.log(message). For the listed bracket to show what could be made. It will be very difficult to made a very specific analysis on where the person is spending too much like housing.  However the memes will be specific to the situation based on the above/under conditions of the 50/30/20 rules
 
+const urlParams = new URLSearchParams(window.location.search);
+const income = urlParams.get('income');
+const expenses = urlParams.get('expenses');
+const personal = urlParams.get('total');
+
+
+
+
+
+
+
+
+
+
+
+
+
+// window.location.href = `SavingsDebt.html?subtotal=income=${income}&expenses=${total}&Personal=${personalFinalTotalExpense}`;
+// });
+// let form = document.getElementById('personalForm');
+// form.addEventListener('submit', function(event) {
+//     event.preventDefault();
+//     // let allPersonalTotal = total; //document.getElementById('NecessaryTotal').value;
+//         window.location.href = `SavingsDebt.html?subtotal=income=${income}&expenses=${total}&personal=${personalFinalTotalExpense}`;
+//     });
+
+// const incomeDisplay = document.getElementById('incomeDisplay');
+const incomeDisplay = document.getElementById('incomeDisplay');
+// Display the income in the <p> element
+incomeDisplay.textContent = `Calculated Income: $${income}, Calculated Need Expenses: $${expenses}, Calculated Personal Expenses: $${total}`;
+// console.log(incomeDisplay.textContent);
