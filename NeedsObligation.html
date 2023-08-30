@@ -8,7 +8,7 @@
     <script src ="./needs.js" defer></script>
 </head>
 <body class="AppIntro">
-    <h1 id="titleIntro">Financial Necessities</h1>
+<h1 id="titleIntro">Financial Necessities</h1>
     <br>
     <p>A large sum of where our financial income goes towards ends up contributing towards our necessities. Above all other categories of where our money should go, this takes precedence in how someone is able to maintain stability.</p>
     <p id="incomeDisplay"></p>
@@ -17,9 +17,8 @@
     <p class="disclaimer">This amount should ONLY comprise of your monthly rent/mortgage</p>
     <form class="needsInput" id="housingExpenses">
         <label>Monthly Housing Expenses $</label>
-            <input type="number" class="expenseInput" step="0.01" id="housingExpenses">
+            <input type="number" class="expenseInput" step="0.01">
             <br>
-            <!-- <input type="submit" value="Submit"> -->
         </form>
     </div>
     <div class id="Questionarea">
@@ -27,9 +26,8 @@
     <p class="disclaimer">Does not count dining-out expenses...including DoorDash</p>
     <form class="needsInput" id="foodExpenses">
         <label>Monthly Food Expenses (Groceries) $</label>
-            <input type="number" class="expenseInput" step="0.01" id="groceryExpenses">
+            <input type="number" class="expenseInput" step="0.01">
             <br>
-            <!-- <input type="submit" value="Submit"> -->
         </form>
     </div>
     <div class id="Questionarea">
@@ -37,29 +35,17 @@
     <p class="disclaimer">Electricity/Water/Gas/Trash/Internet/Loans/Payments/Insurance</p>
     <form class="needsInput" id="utilitiesExpenses">
         <label>Monthly Utilities Expenses $</label>
-            <input type="number" class="expenseInput" step="0.01" id="utilityExpenses">
+            <input type="number" class="expenseInput" step="0.01">
             <br>
-            <!-- <input type="submit" value="Submit"> -->
         </form>
     </div>
-    <!-- <div class id = "Questionarea">
-        <h2 style="display: flex; justify-content: space-between;">Bills</h2>
-        <form id="billsExpenses">
-            <label>Monthly Bills Expenses $</label>
-            <p class="disclaimer">Phone,Insurance,</p>
-                <input type="number" step="0.01" id="utilityExpenses">
-                <br>
-                <input type="submit" value="Submit">
-        </form>
-    </div> -->
     <div class id="Questionarea">
         <h2 style="display: flex; justify-content: space-between;">Transportation</h2>
         <form class="needsInput" id="transportationExpenses">
             <p class="disclaimer">Cost of Fuel or Bus/Train Fare per month</p>
             <label>Monthly Transportation Expenses $</label>
-                <input type="number" class="expenseInput" step="0.01" id="utilityExpenses">
+                <input type="number"  step="0.01">
                 <br>
-                <!-- <input type="submit" value="Submit"> -->
         </form>
     </div>
     <div class id="Questionarea">
@@ -67,9 +53,8 @@
         <form class="needsInput" id="childCareExpenses">
             <p class="disclaimer">Formula/Diapers/Day Care</p>
             <label>Monthly Child Care Expenses $</label>
-                <input type="number" class="expenseInput" step="0.01" id="childCareExpenses">
+                <input type="number" step="0.01">
                 <br>
-                <!-- <input type="submit" value="Submit"> -->
         </form>
     </div>
 </div>
@@ -78,14 +63,12 @@
     <!-- <h2>Total: $<span id="totalNeedAmount">0</span></h2><input type="number" id="TotalIncome">
     <br>
     <input type="submit" value="Submit">  -->
-
     <form id="necessaryForm">
         <label id="needLabel">Total Necessary Expenses $</label>
         <input type="number" id="NecessaryTotal" disabled>
         <br>
         <input type="submit" value="Submit"> 
     </form> 
-</form> 
 </div>
 </body>
 </html>
