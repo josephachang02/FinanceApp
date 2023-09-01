@@ -8,12 +8,12 @@ let total=0;
 //when the value changes, calculate the total of all 5 inputs
 //select the total element and set text content=total variable
 
-const subscriptionExpensesInput = document.getElementById('SubscriptionExpenses');
-const membershipExpensesInput = document.getElementById('MembershipExpenses');
-const entertainmentExpensesInput = document.getElementById('EntertainmentExpenses');
-const retailExpensesInput = document.getElementById('RetailExpenses');
-const diningExpensesInput = document.getElementById('DiningExpenses');
-const vacationExpensesInput = document.getElementById('VacationExpenses');
+const subscriptionExpensesInput = document.getElementById('subscriptionExpenses');
+const membershipExpensesInput = document.getElementById('membershipExpenses');
+const entertainmentExpensesInput = document.getElementById('entertainmentExpenses');
+const retailExpensesInput = document.getElementById('retailExpenses');
+const diningExpensesInput = document.getElementById('diningExpenses');
+const vacationExpensesInput = document.getElementById('vacationExpenses');
 
 //select all inputs
 const allPersonalInput = document.querySelectorAll('.personalInput input');
@@ -38,7 +38,19 @@ const form = document.getElementById('personalForm');
 form.addEventListener('submit', function(event) {
     event.preventDefault();
     // let allPersonalTotal = total; //document.getElementById('NecessaryTotal').value;
-    window.location.href = `SavingsDebt.html?subtotal=${income}&expenses=${total}&personal=${total}`;
+    window.location.href = `SavingsDebt.html?income=${income}&expenses=${expenses}&personal=${total}`;
+    });
+
+    const clearButton = document.getElementById('clearButton');
+    clearButton.addEventListener('click', function() {
+        const totalPersonalInput = document.getElementById('PersonalTotal')
+        totalPersonalInput.value = '';
+        
+        allPersonalInput.forEach(input => {
+            input.value = '';
+        });
+    
+        total = 0;
     });
 
 const incomeDisplay = document.getElementById('incomeDisplay');

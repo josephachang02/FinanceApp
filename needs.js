@@ -55,6 +55,18 @@ allNeedsInput.forEach(input => {
         window.location.href = `PersonalSpendings.html?income=${income}&expenses=${total}`;
     });
 
+    const clearButton = document.getElementById('clearButton');
+    clearButton.addEventListener('click', function() {
+        const totalNecessaryInput = document.getElementById('NecessaryTotal')
+        totalNecessaryInput.value = '';
+        
+        allNeedsInput.forEach(input => {
+            input.value = '';
+        });
+    
+        total = 0;
+    });
+
 
 //Moving calculated income from previous page to the current page with the p id-"incomeDisplay"
 // const queryString = window.location.search;

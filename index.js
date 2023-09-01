@@ -2,10 +2,22 @@
     const form = document.getElementById('incomeInitial');
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the default form submission
+
         const totalIncome = document.getElementById('TotalIncome').value;
         // Assuming you want to navigate to 'result.html'
         window.location.href = `NeedsObligation.html?income=${totalIncome}`;
     });
+
+    const clearButton = document.getElementById('clearButton');
+    clearButton.addEventListener('click', function() {
+        const totalIncomeInput = document.getElementById('TotalIncome');
+        totalIncomeInput.value = ''; // Clear the input field
+    });
+// reason why i only want the clear button is to remove the values 
+
+
+
+
 
 // document.addEventListener('DOMContentLoaded', function() {
 //     const form = document.getElementById('incomeNecessities');

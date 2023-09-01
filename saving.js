@@ -18,13 +18,17 @@
 const urlParams = new URLSearchParams(window.location.search);
 const income = urlParams.get('income');
 const expenses = urlParams.get('expenses');
-const personal = urlParams.get('total');
+const personal = urlParams.get('personal');
 
 
 
 
 
 
+
+let spentTotal = (expenses.value + personal.value)
+
+if (income )
 
 
 

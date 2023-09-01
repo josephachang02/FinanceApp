@@ -33,11 +33,16 @@
     <h2 style="text-align: center; margin: 0 auto;">Beginning our Financial Breakdown</h2>
     <p style="justify-content: center; font-size: 15px;">As a first step, let's begin by looking at how much you take in from your income to give us a basis for how much can be allocated towards your expenses. Below you will enter your yearly income after taxes</p>
     <br>
-    <form id="incomeInitial">
-        <label id="totalLabel">Total Income $</label>
-        <input type="number" id="TotalIncome">
+    <div class="button-container">
+        <form id="incomeInitial">
+            <label id="totalLabel">Total Income $</label>
+            <input type="number" id="TotalIncome">
+            <br>
+            <br>
+            <input type="submit" value="Submit"> 
+        </form> 
         <br>
-        <input type="submit" value="Submit"> 
-    </form> 
+        <button id="clearButton">Clear</button>
+    </div>
 </body>
 </html>
