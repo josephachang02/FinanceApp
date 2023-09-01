@@ -19,6 +19,26 @@ const urlParams = new URLSearchParams(window.location.search);
 const income = urlParams.get('income');
 const expenses = urlParams.get('expenses');
 const personal = urlParams.get('personal');
+const necessitiesButton = document.getElementById('revealNecessities'); 
+const NecessitiesPTag = document.getElementById('necessitiesResult');
+const personalButton = 
+
+
+
+const incomeDisplay = document.getElementById('incomeDisplay');
+// Display the income in the <p> element
+incomeDisplay.textContent = `Calculated Income: $${income}, Calculated Need Expenses: $${expenses}, Calculated Personal Expenses: $${personal}`;
+
+
+
+//Retrieving the value of the total saved which will be the difference of the income and the (spendings/necesities) combined
+const spentTotal = expenses + personal;
+const savedTotal = income - spentTotal;
+
+// Percentage of the Amount divided by the total income
+const needPercentage = (expenses/income) * 100; 
+const personalPercentage = (personal/income) * 100;
+const savingsPercentage = (savedTotal /income) * 100;
 
 
 
@@ -26,11 +46,67 @@ const personal = urlParams.get('personal');
 
 
 
-let spentTotal = (expenses.value + personal.value)
+//Personal spendings console.log brackets for when the amount is either or differences. 
+const needsResult = needPercentage;
+const personalResult = personalPercentage;
+const savingsResult = savingsPercentage;
 
-if (income )
 
+//event listener for the buttons, once clicked they will populate the specific text parameters that fit the given variable 
+necessitiesButton.addEventListener('click', ()=>{
+//Necesities Messaging Console 
+ let finalText;
+    if (needPercentage > 0 && needPercentage <= 30) {
+        finalText ="Lots of Room for Savings";
+    } else if (needPercentage > 30 && needPercentage <= 45) {
+        finalText = "good";
+    } else if (needPercentage > 45 && needPercentage <= 55) {
+        finalText ="Break Even";
+    } else if (needPercentage > 55 && needPercentage <= 65) {
+        finalText ="bad";
+    } else if (needPercentage > 65) {
+        finalText ="WAYY too much in necessary Spending";
+    }
 
+    NecessitiesPTag.textContent = finalText;
+});
+
+personalButton.addEventListener('click', ()=>{
+    let personalText;
+    if (personalPercentage > 0 && personalPercentage <= 15) {
+        personalText ="Very Low Personal Spending";
+    } else if (personalPercentage > 15 && personalPercentage <= 25) {
+        personalText ="little";
+    } else if (personalPercentage > 25 && personalPercentage <= 35) {
+        personalText ="Break Even";
+    } else if (personalPercentage > 35 && personalPercentage <= 45) {
+        personalText ="more";
+    } else if (personalPercentage > 45) {
+        personalText ="WAYY Too much Spending in your Personal";
+    }
+
+    personalResult.textContext = personalText;
+});
+
+//Personal Spending Messaging Console. 30 is even 
+savingsButton.addEventListener('click', ()=>{
+    let savingsText; 
+    if (savingsPercentage > 0) {
+        savingsText ="Spending  more than you are making";
+    } else if(savingsPercentage > 0 && savingsPercentage <= 10) {
+        savingsText ="Very little to no savings made";
+    } else if (savingsPercentage > 10 && savingsPercentage <= 15) {
+        savingsText ="Getting closer to a good savings amount, however some changes in the personal spending would be helpful";
+    } else if (savingsPercentage > 15 && savingsPercentage <= 25) {
+        savingsText ="At the green line standard of where you should typically be saving. ";
+    } else if (savingsPercentage > 25 && savingsPercentage <= 35) {
+        savingsText ="Saving more than the recommended amount";
+    } else if (savingsPercentage > 35 && savingsPercentage <= 50) {
+        savingsText ="Saving Farm more than the exceed amount";
+    }
+
+    savingsResult.textContext = savingsText
+});
 
 
 
@@ -46,7 +122,5 @@ if (income )
 //     });
 
 // const incomeDisplay = document.getElementById('incomeDisplay');
-const incomeDisplay = document.getElementById('incomeDisplay');
-// Display the income in the <p> element
-incomeDisplay.textContent = `Calculated Income: $${income}, Calculated Need Expenses: $${expenses}, Calculated Personal Expenses: $${total}`;
+
 // console.log(incomeDisplay.textContent);

@@ -28,7 +28,7 @@ const totalPersonalExpenses=()=>{
     let totalField = document.getElementById('PersonalTotal');
     totalField.value = total;
 };
-// console.log(totalField);
+
 allPersonalInput.forEach(input => {
     input.addEventListener('change', totalPersonalExpenses);
 });
@@ -37,7 +37,6 @@ allPersonalInput.forEach(input => {
 const form = document.getElementById('personalForm');
 form.addEventListener('submit', function(event) {
     event.preventDefault();
-    // let allPersonalTotal = total; //document.getElementById('NecessaryTotal').value;
     window.location.href = `SavingsDebt.html?income=${income}&expenses=${expenses}&personal=${total}`;
     });
 
