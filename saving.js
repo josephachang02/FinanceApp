@@ -21,7 +21,12 @@ const expenses = urlParams.get('expenses');
 const personal = urlParams.get('personal');
 const necessitiesButton = document.getElementById('revealNecessities'); 
 const NecessitiesPTag = document.getElementById('necessitiesResult');
-const personalButton = 
+const personalButton = document.getElementById('revealPersonal');
+const PersonalPTag = document.getElementById('personalResult');
+const savingsButton = document.getElementById('revealSavings');
+const SavingsPTag = document.getElementById('savingsResult');
+const FinanceButton = document.getElementById('RevealFinanceBtn');
+const RevealMemeImage = document.getElementById('MemeImage');
 
 
 
@@ -72,6 +77,7 @@ necessitiesButton.addEventListener('click', ()=>{
 });
 
 personalButton.addEventListener('click', ()=>{
+
     let personalText;
     if (personalPercentage > 0 && personalPercentage <= 15) {
         personalText ="Very Low Personal Spending";
@@ -85,13 +91,14 @@ personalButton.addEventListener('click', ()=>{
         personalText ="WAYY Too much Spending in your Personal";
     }
 
-    personalResult.textContext = personalText;
+    PersonalPTag.textContent = personalText;
 });
 
 //Personal Spending Messaging Console. 30 is even 
 savingsButton.addEventListener('click', ()=>{
+
     let savingsText; 
-    if (savingsPercentage > 0) {
+    if (savingsPercentage <= 0) {
         savingsText ="Spending  more than you are making";
     } else if(savingsPercentage > 0 && savingsPercentage <= 10) {
         savingsText ="Very little to no savings made";
@@ -105,8 +112,16 @@ savingsButton.addEventListener('click', ()=>{
         savingsText ="Saving Farm more than the exceed amount";
     }
 
-    savingsResult.textContext = savingsText
+    SavingsPTag.textContent = savingsText;
 });
+
+
+// This is where the add event listener will populate a meme based on the criteria of the user's finance report. We can group together several statuses that will create a very specific meme based on the user's 
+FinanceButton.addEventListener("click", ()=> {
+    let RevealMemeImage =;
+    if 
+});
+
 
 
 
