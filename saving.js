@@ -45,12 +45,6 @@ const needPercentage = (expenses/income) * 100;
 const personalPercentage = (personal/income) * 100;
 const savingsPercentage = (savedTotal /income) * 100;
 
-
-
-
-
-
-
 //Personal spendings console.log brackets for when the amount is either or differences. 
 const needsResult = needPercentage;
 const personalResult = personalPercentage;
@@ -62,15 +56,15 @@ necessitiesButton.addEventListener('click', ()=>{
 //Necesities Messaging Console 
  let finalText;
     if (needPercentage > 0 && needPercentage <= 30) {
-        finalText ="Lots of Room for Savings";
+        finalText ="Lots of Room for Savings. Take advantage of the savings you make";
     } else if (needPercentage > 30 && needPercentage <= 45) {
-        finalText = "good";
+        finalText = "good. Making good financial decisions with the ammount that you save.";
     } else if (needPercentage > 45 && needPercentage <= 55) {
-        finalText ="Break Even";
+        finalText ="You are spending just at the typical range where necessities reach. Break even";
     } else if (needPercentage > 55 && needPercentage <= 65) {
-        finalText ="bad";
+        finalText ="exceeding the threshold for what a typical necesities budget considers. You might want to reconsider your housing situation that can be improved. There are also some ways to change your necesities such as taking the bus instead of driving, or monitor you grocery spendings.";
     } else if (needPercentage > 65) {
-        finalText ="WAYY too much in necessary Spending";
+        finalText ="WAYY too much in necessary Spending. Consider options of how you can greatly reduce your spendings in Housing and Groceries. ";
     }
 
     NecessitiesPTag.textContent = finalText;
@@ -80,15 +74,15 @@ personalButton.addEventListener('click', ()=>{
 
     let personalText;
     if (personalPercentage > 0 && personalPercentage <= 15) {
-        personalText ="Very Low Personal Spending";
+        personalText ="Very Low Personal Spending. It is healthhy to utilize these types of spendings to improve your quality of life. It might even be suggested that you pool more into this amount that can contribute to your health, hobbies and overall well-being";
     } else if (personalPercentage > 15 && personalPercentage <= 25) {
-        personalText ="little";
+        personalText ="little. You are utilizing your spendings in a very controlled manner. ";
     } else if (personalPercentage > 25 && personalPercentage <= 35) {
-        personalText ="Break Even";
+        personalText ="Break Even.";
     } else if (personalPercentage > 35 && personalPercentage <= 45) {
         personalText ="more";
     } else if (personalPercentage > 45) {
-        personalText ="WAYY Too much Spending in your Personal";
+        personalText ="WAYY Too much Spending in your Personal. To optimize your savings, its important to evaluate your  own spendings that you do and reconsider what kind of lifestyle changes can be made to adjust those";
     }
 
     PersonalPTag.textContent = personalText;
@@ -119,12 +113,22 @@ savingsButton.addEventListener('click', ()=>{
 // This is where the add event listener will populate a meme based on the criteria of the user's finance report. We can group together several statuses that will create a very specific meme based on the user's 
 
 // for this example, we want to create the unique idenifier that will const a specific sceanrio for the amount, once we have set that identifier then we can if == then meme =x. 
+
+
+//create unique identifiers that will not interfere with the previous statuses from above, if those same conditions are used they will conflict with the previous statuses. We need to recreate those same statuses above but with a unique name that can be used below. 
+
+let desperationMeme=(savingsPercentage <=0 || personalPercentage > 35 && personalPercentage <= 45 || needPercentage > 55 && needPercentage <= 65);
+
+
+
+
+
 FinanceButton.addEventListener("click", ()=> {
-    let Meme =;
-    if (savingsPercentage <=0 && personalPercentage > 35 && personalPercentage <= 45 && needPercentage > 55 && needPercentage <= 65) {
+    let Meme ='';
+    if (desperationMeme) {
         Meme = "https://media0.giphy.com/media/gKfyusl0PRPdTNmwnD/giphy.gif?cid=ecf05e47olecwa440sa3f240dn2ly04sdy5z9aaqpyf9xd0e&ep=v1_gifs_search&rid=giphy.gif&ct=g";
     }
-    RevealMemeImage.textContent = Meme;
+    RevealMemeImage.src = Meme;
 });
 
 
