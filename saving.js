@@ -117,9 +117,14 @@ savingsButton.addEventListener('click', ()=>{
 
 
 // This is where the add event listener will populate a meme based on the criteria of the user's finance report. We can group together several statuses that will create a very specific meme based on the user's 
+
+// for this example, we want to create the unique idenifier that will const a specific sceanrio for the amount, once we have set that identifier then we can if == then meme =x. 
 FinanceButton.addEventListener("click", ()=> {
-    let RevealMemeImage =;
-    if 
+    let Meme =;
+    if (savingsPercentage <=0 && personalPercentage > 35 && personalPercentage <= 45 && needPercentage > 55 && needPercentage <= 65) {
+        Meme = "https://media0.giphy.com/media/gKfyusl0PRPdTNmwnD/giphy.gif?cid=ecf05e47olecwa440sa3f240dn2ly04sdy5z9aaqpyf9xd0e&ep=v1_gifs_search&rid=giphy.gif&ct=g";
+    }
+    RevealMemeImage.textContent = Meme;
 });
 
 
