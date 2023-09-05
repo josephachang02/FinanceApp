@@ -3,9 +3,12 @@
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the default form submission
 
-        const totalIncome = document.getElementById('TotalIncome').value;
+        const income = parseFloat(document.getElementById('TotalIncome').value) / 12;
         // Assuming you want to navigate to 'result.html'
-        window.location.href = `NeedsObligation.html?income=${totalIncome}`;
+
+        const formattedIncome = income.toFixed(2).toLocaleString(undefined, { minimumFractionDigits: 2 });
+
+        window.location.href = `NeedsObligation.html?MonthlyIncome=${formattedIncome}`;
     });
 
     const clearButton = document.getElementById('clearButton');

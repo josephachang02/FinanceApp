@@ -1,6 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
-const income = urlParams.get('income');
-const expenses = urlParams.get('expenses');
+const income = urlParams.get('MonthlyIncome');
+const expenses = urlParams.get('Expenses');
 
 let total=0;
 //select all inputs
@@ -55,4 +55,4 @@ form.addEventListener('submit', function(event) {
 const incomeDisplay = document.getElementById('incomeDisplay');
 
 // Display the income in the <p> element
-incomeDisplay.textContent = `Calculated Income: $${income}, Calculated Need Expenses: $${expenses}`;
+incomeDisplay.textContent = `Calculated Monthly Income: $${income}, Calculated Monthly Need Expenses: $${expenses}`;

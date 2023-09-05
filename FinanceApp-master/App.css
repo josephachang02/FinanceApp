@@ -60,9 +60,26 @@ h3>p {
     margin: 0 auto;
     align-items: flex-start;
 }
-/* const pages = [
-  'NeedsObligation.html',
-  'PersonalSpendings.html',
-  'SavingsDebt.html'
-];
-let currentPageIndex = 0; */
+#MemeImage {
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    display: block; /* Center the image horizontally */
+    margin: 0 auto;
+}
+.incomeContainer, .necessitiesContainer, .personalContainer, .savingsContainer {
+    background-color: #f5f5f5; /* Add a light background color */
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+.button-container button:hover {
+    background-color: #abc6e3;
+}
+.button-container button {
+    background-color: #4383c7; /* Change button background color */
+    color: #fff; /* Change text color to white */
+    border: none;
+    padding: 10px 20px; /* Add padding for button size */
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}

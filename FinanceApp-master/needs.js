@@ -1,5 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
-const income = parseFloat(urlParams.get('income'));
+const formattedIncome = urlParams.get('MonthlyIncome');
 
 let total=0;
 
@@ -52,7 +52,7 @@ allNeedsInput.forEach(input => {
         event.preventDefault(); // Prevent the default form submission
         // const endSubNeed = document.getElementById('NecessaryTotal').value + document.getElementById('incomeInitial').value; 
         // Assuming you want to navigate to 'result.html'
-        window.location.href = `PersonalSpendings.html?income=${income}&expenses=${total}`;
+        window.location.href = `PersonalSpendings.html?MonthlyIncome=${formattedIncome}&Expenses=${total}`;
     });
 
     const clearButton = document.getElementById('clearButton');
@@ -79,4 +79,4 @@ allNeedsInput.forEach(input => {
 const incomeDisplay = document.getElementById('incomeDisplay');
 
 // Display the income in the <p> element
-incomeDisplay.textContent = `Calculated Income: $${income}`;
+incomeDisplay.textContent = `Calculated Monthly Income: $${formattedIncome}`;
