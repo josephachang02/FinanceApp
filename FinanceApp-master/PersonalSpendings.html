@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Spending</title>
+    <link rel ="stylesheet" href="App.css">
+    <script src ="./personal.js" defer></script>
+</head>
+<body class="AppIntro">
+    <h1 id="titleIntro">Personal Spending Expenses</h1>
+    <br>
+    <p>Our personal lifestyle choices largely dictate how much of our personal expenses get pulled from. And although these expenses don't amount nearly to what our primary expenses total to, a large majority of people unknowingly over exceed this amount. However, this portion of our finance is where we also have the most control over, unlike our housing or child care expenses where we don't have as much control over. This section will pool all of our total Personal Expenses together to give you an idea for how much of your spending percentage comes from personal spending.</p>
+    <p id="incomeDisplay"></p>
+    <div class id = "Questionarea">
+    <h2 style="display: flex; justify-content: space-between;">Subscriptions</h2>
+    <p class="disclaimer">Netflix, Spotify,</p>
+    <form class="personalInput" id="subscriptionExpenses">
+        <label>Monthly Subscription Expenses $</label>
+            <input type="number" class="personalValue" step="0.01">
+            <br>
+        </form>
+    </div>
+    <div class id = "Questionarea">
+    <h2 style="display: flex; justify-content: space-between;">Memberships</h2>
+    <p class="disclaimer">Gyms</p>
+    <form class="personalInput" id="membershipExpenses">
+        <label>Monthly Memberships Expenses $</label>
+            <input type="number" class="personalValue" step="0.01">
+            <br>
+        </form>
+    </div>
+    <div class id = "Questionarea">
+    <h2 style="display: flex; justify-content: space-between;">Recreation/Entertainment</h2>
+    <form class="personalInput" id="entertainmentExpenses">
+        <p></p>
+        <label>Monthly Recreation/Entertainment Expenses $</label>
+            <input type="number" class="personalValue" step="0.01">
+            <br>
+        </form>
+    </div>
+    <div class id = "Questionarea">
+        <h2 style="display: flex; justify-content: space-between;">Retail</h2>
+        <form class="personalInput" id="retailExpenses">
+            <p>Expenses on Shoes, Clothing, Accessories</p>
+            <label>Monthly Retail Expenses $</label>
+                <input type="number" class="personalValue" step="0.01">
+                <br>
+        </form>
+    </div>
+    <div class id = "Questionarea">
+        <h2 style="display: flex; justify-content: space-between;">Dining</h2>
+        <form class="personalInput" id="diningExpenses">
+            <p>Door Dash, Dining out at Restaurants</p>
+            <label>Monthly Dining Expenses $</label>
+            <input type="number" class="personalValue" step="0.01">
+                <br>
+        </form>
+    </div>
+    <div class id = "Questionarea">
+        <h2 style="display: flex; justify-content: space-between;">Vacation/Traveling</h2>
+        <form class="personalInput" id="vacationExpenses">
+            <p>Flights, Hotels, Day-Activities</p>
+            <label>Monthly Vacation/Traveling Expenses $</label>
+            <input type="number" class="personalValue" step="0.01">
+                <br>
+        </form>
+    </div>
+</div>
+<br>
+<!-- <div id="totalColumn">
+    <h2>Total: $<span id="totalAmount">0</span></h2> -->
+
+
+    <div id="button-container">
+        <!-- <h2>Total: $<span id="totalNeedAmount">0</span></h2><input type="number" id="TotalIncome">
+        <br>
+        <input type="submit" value="Submit">  -->
+    
+        <form id="personalForm">
+            <label id="personalLabel">Total Personal Expenses $</label>
+            <input type="number" id="PersonalTotal" disabled>
+            <br>
+            <input type="submit" value="Submit"> 
+        </form> 
+        <br>
+        <button id="clearButton">Clear</button>
+    </div>
+</div>
+</div>
+</body>
+</html>
