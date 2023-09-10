@@ -107,7 +107,7 @@ h1, h2, h3 {
 }
 
 .button-container button {
-    background-color: #4383c7;
+    background-color: rgb(73, 111, 144);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -115,7 +115,7 @@ h1, h2, h3 {
     transition: background-color 0.3s ease;
 }
 
-/* Image Styles */
+
 #MemeImage {
     max-width: 100%;
     display: block;
@@ -124,3 +124,10 @@ h1, h2, h3 {
 .disclaimer {
     font-style: italic;
 }
+
+#titleIntro {
+    text-align: center;
+    margin: 0 auto;
+    align-items: flex-start;
+    border-bottom: 2px solid black;
+};
