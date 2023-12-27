@@ -13,7 +13,7 @@ const childCareExpensesInput = document.getElementById('childCareExpenses');
 const allNeedsInput = document.querySelectorAll('.needsInput input');
 
 const totalNeedExpenses=()=>{
-    // let total = 0;
+    let total = 0;
     allNeedsInput.forEach(input => {
         total += parseFloat(input.value) || 0;
     // console.log(input); console.log(input.value);
@@ -22,30 +22,13 @@ const totalNeedExpenses=()=>{
     let totalField = document.getElementById('NecessaryTotal');
     // console.log(total); 
     // console.log(totalField);
-    totalField.value = total;
+    totalField.value = total.toFixed(2);;
+    return totalField
 };
 //add a change event listener to each input
 allNeedsInput.forEach(input => {
     input.addEventListener('change', totalNeedExpenses);
 });
-//when the value changes, calculate the total of all 5 inputs
-
-//select the total element and set text content=total variable
-//I want the needTotal to show up in the inputID->NecessaryTotal. 
-//disabled so a manual input cannot be inclued
-//I think i want to have the 
-
-// let form = document.getElementById('necessaryForm');
-
-// form.addEventListener('submit', function(event) {
-//     event.preventDefault();
-//     let needTotal = total;
-//     let personalNeedTotal = total + income;
-    
-
-//     getElementById('NecessaryTotal').value;
-//         window.location.href = `PersonalSpendings.html?necessarysubtotal=${personalNeedTotal}`;
-//     });
 
     const form = document.getElementById('necessaryForm');
     form.addEventListener('submit', function(event) {
