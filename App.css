@@ -67,17 +67,36 @@ let currentPageIndex = 0; */
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #Percentage {
-    max-width: 600px; /* Adjust the value based on your preference */
+    width: calc(33.33% - 20px); 
+    box-sizing: border-box;/* Adjust the value based on your preference */
         margin: 0 auto; /* Center the content within the available width */
         padding: 10px;
         border: 2px solid #ccc; /* Add a border for better separation */
         margin-bottom: 15px;
+    background-color: aliceblue;
 }
 #PercentageTitle {
     margin-top: 1;
     justify-content: center;
     text-align: center;
+    padding: 10px
+}
+
+#Percentage p {
+    margin: 15px;
+  }
+
+#FinanceDepiction {
+object-fit: contain;
+width: 100%; /* Use 100% width to fill the container */
+height: auto; /* Auto height to maintain aspect ratio */
+border: 0.5px solid #000000;
+margin: 10 auto; /* Center horizontally */
+display: block;
 }
